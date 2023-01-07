@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>11</LangVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Lambda Save Poco</Title>
+        <Description>No Throw Wrapper
+
+Apache License Version 2.0</Description>
+        <Copyright>lambda</Copyright>
+        <PackageLicenseUrl>http://www.apache.org/licenses/</PackageLicenseUrl>
+        <RepositoryType>GIT</RepositoryType>
+        <PackageTags>lambda</PackageTags>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <Optimize>true</Optimize>
+      <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+      <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+      <PlatformTarget>x64</PlatformTarget>
+      <DebugType>none</DebugType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LamLibAllOver" Version="1.0.1" />
+      <PackageReference Include="NPoco" Version="5.7.0" />
+    </ItemGroup>
+
+</Project>
